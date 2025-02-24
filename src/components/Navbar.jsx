@@ -39,7 +39,7 @@ const NavBar = () => {
             <div className="absolute inset-0 bg-purple-500/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
           <div className="flex flex-col">
-            <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
+            <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
               MindFlare
             </span>
             <span className="text-[0.6rem] md:text-xs text-white/50 font-medium -mt-1 tracking-wider">
