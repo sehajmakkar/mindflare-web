@@ -19,11 +19,11 @@ const Hero = () => {
         {/* Main Content */}
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-            Welcome to Mindflare
+            Welcome to Mindflare!
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Maharaja Agrasen Institute of Technology.
+          Fostering a culture of learning, coding, and problem solving at MAIT.
           </p>
 
           {/* Social Buttons */}

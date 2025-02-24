@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, BrainCircuit } from 'lucide-react';
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,9 +30,23 @@ const NavBar = () => {
         max-w-6xl w-full
       `}>
         {/* Logo */}
-        <div className="text-xl font-bold text-white opacity-90 hover:opacity-100 transition-opacity">
-          Mindflare
-        </div>
+        <a href="#" className="flex items-center gap-2 group">
+          <div className="relative">
+            <BrainCircuit 
+              size={28} 
+              className="text-purple-500 transition-all duration-300 group-hover:scale-110 group-hover:text-purple-400"
+            />
+            <div className="absolute inset-0 bg-purple-500/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
+              MindFlare
+            </span>
+            <span className="text-[0.6rem] md:text-xs text-white/50 font-medium -mt-1 tracking-wider">
+              TECH SOCIETY
+            </span>
+          </div>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">

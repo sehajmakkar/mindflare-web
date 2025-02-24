@@ -29,7 +29,7 @@ const EventsSection = () => {
     <section className="w-full min-h-screen bg-black py-20 overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-white/90 mb-16 text-center animate-fade-in">
-          Recent Events
+          MindFlare is always upto something!
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8">
@@ -48,53 +48,54 @@ const EventsSection = () => {
   );
 };
 
-// EventCard component remains the same
 const EventCard = ({ event }) => {
   const [currentImage, setCurrentImage] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
 
-  const nextImage = () => {
+  const nextImage = (e) => {
+    e.stopPropagation();
     setCurrentImage((prev) => (prev + 1) % event.images.length);
   };
 
-  const prevImage = () => {
+  const prevImage = (e) => {
+    e.stopPropagation();
     setCurrentImage((prev) => (prev - 1 + event.images.length) % event.images.length);
   };
 
   return (
     <div 
-      className="bg-zinc-900/50 rounded-xl overflow-hidden border border-white/5 transition-transform duration-300 hover:translate-y-[-4px] hover:shadow-lg hover:shadow-purple-500/10"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className="bg-zinc-900/50 rounded-xl overflow-hidden border border-white/5 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg hover:shadow-purple-500/10 group"
     >
       <div className="relative aspect-[3/2]">
         <div className="relative w-full h-full">
           <img
             src={event.images[currentImage]}
             alt={`${event.title}`}
-            className="w-full h-full object-cover transition-transform duration-500 ease-out"
+            className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           />
           
-          <div className={`absolute inset-0 flex items-center justify-between p-2 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+          <div className="absolute inset-0 flex items-center justify-between p-2">
             <button
               onClick={prevImage}
-              className="p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors transform hover:scale-110"
+              className="p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-all duration-300 transform hover:scale-110"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={nextImage}
-              className="p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors transform hover:scale-110"
+              className="p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-all duration-300 transform hover:scale-110"
             >
               <ChevronRight size={20} />
             </button>
           </div>
 
-          <div className={`absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
             {event.images.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentImage(index)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setCurrentImage(index);
+                }}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
                   currentImage === index
                     ? 'bg-white w-6'
