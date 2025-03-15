@@ -38,7 +38,7 @@ const Hero = () => {
           {/* Social Buttons */}
           <div className="flex items-center justify-center gap-4">
             <a
-              href="#"
+              href="https://www.instagram.com/mindflare_mait?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               className="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 
                          rounded-full backdrop-blur-sm border border-white/10 
                          transition-all duration-300"
@@ -48,7 +48,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="#"
+              href="https://in.linkedin.com/company/mindflare2?trk=public_profile_topcard-current-company"
               className="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 
                          rounded-full backdrop-blur-sm border border-white/10 
                          transition-all duration-300"

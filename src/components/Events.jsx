@@ -8,19 +8,21 @@ const EventsSection = () => {
       title: "DSAxTREME BATTLE 1.O",
       description: "An intensive workshop on emerging technologies and their applications in modern software development.",
       images: [
-        "/api/placeholder/600/400",
-        "/api/placeholder/600/400",
-        "/api/placeholder/600/400"
+        "src/assets/events/dsa/03.jpg",
+        "src/assets/events/dsa/02.jpg",
+        "src/assets/events/dsa/01.jpg",
+        "src/assets/events/dsa/04.jpg"
       ]
     },
     {
       id: 2,
-      title: "Introduction",
-      description: "24-hour coding challenge where teams competed to build innovative solutions for real-world problems.",
+      title: "Orientation",
+      description: "From unveiling our vision of innovation to sharing exciting plans for hackathons, coding battles, workshops, and networking sessions — the enthusiasm was contagious!",
       images: [
-        "/api/placeholder/600/400",
-        "/api/placeholder/600/400",
-        "/api/placeholder/600/400"
+        "src/assets/events/orientation/04.png",
+        "src/assets/events/orientation/02.png",
+        "src/assets/events/orientation/01.png",
+        "src/assets/events/orientation/03.png"
       ]
     }
   ];
@@ -62,7 +64,7 @@ const EventCard = ({ event }) => {
   };
 
   return (
-    <div 
+    <div id='projects'
       className="bg-zinc-900/50 rounded-xl overflow-hidden border border-white/5 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg hover:shadow-purple-500/10 group"
     >
       <div className="relative aspect-[3/2]">

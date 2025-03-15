@@ -16,102 +16,89 @@ const TeamSection = () => {
   const teamData = {
     Executive: [
       {
-        name: "John Doe",
+        name: "Ankush",
         role: "President",
-        image: "/api/placeholder/300/300",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
+        image: "src/assets/team/Ankush.jpg",
+        linkedin: "https://www.linkedin.com/in/ankush-prasad-990a86259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        // github: "https://github.com"
       },
       {
-        name: "Sarah Connor",
+        name: "Karan",
         role: "Vice President",
-        image: "/api/placeholder/300/300",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
+        image: "src/assets/team/karan.jpg",
+        // linkedin: "https://linkedin.com",
+        // github: "https://github.com"
+      },
+      {
+        name: "Piyush",
+        role: "Secretary",
+        image: "src/assets/team/piyush.jpg",
+        linkedin: "https://www.linkedin.com/in/piyush-jha-93b94222b/",
+        // github: "https://github.com"
       }
     ],
     Technical: [
       {
-        name: "Jane Smith",
-        role: "Tech Lead",
-        image: "/api/placeholder/300/300",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
+        name: "Sehaj Preet",
+        role: "Technical Head",
+        image: `src/assets/team/sehaj.png`,
+        linkedin: "https://www.linkedin.com/in/sehajmakkar/",
+        github: "https://github.com/sehajmakkar"
       },
       {
-        name: "Mike Ross",
-        role: "Senior Developer",
-        image: "/api/placeholder/300/300",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
-      },
-      {
-        name: "Rachel Green",
-        role: "UI/UX Designer",
-        image: "/api/placeholder/300/300",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
+        name: "Dhruv",
+        role: "Creative Head",
+        image: "src/assets/team/dhruv.jpg",
+        // linkedin: "https://linkedin.com",
+        // github: "https://github.com"
       }
     ],
     PR: [
       {
-        name: "Alice Johnson",
-        role: "PR Head",
-        image: "/api/placeholder/300/300",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
+        name: "Udita",
+        role: "PR Officer",
+        image: "src/assets/team/udita.jpg",
+        // linkedin: "https://linkedin.com",
+        // github: "https://github.com"
       },
       {
-        name: "Tom Hardy",
-        role: "PR Specialist",
-        image: "/api/placeholder/300/300",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
-      }
+        name: "Aditya",
+        role: "Marketing Head",
+        image: "src/assets/team/aditya.jpg",
+        // linkedin: "https://linkedin.com",
+        // github: "https://github.com"
+      },
+
     ],
     "Event Management": [
       {
-        name: "Bob Wilson",
+        name: "Chirag",
         role: "Event Coordinator",
-        image: "/api/placeholder/300/300",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
+        image: "src/assets/team/chirag.jpg",
+        // linkedin: "https://linkedin.com",
+        // github: "https://github.com"
       },
       {
-        name: "Emma Stone",
-        role: "Event Planner",
-        image: "/api/placeholder/300/300",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
-      }
+        name: "Abhay",
+        role: "Photography Head",
+        image: "src/assets/team/abhay.jpg",
+        // linkedin: "https://linkedin.com",
+        // github: "https://github.com"
+      },
     ],
     Coordination: [
       {
-        name: "Eva Brown",
-        role: "Lead Coordinator",
-        image: "/api/placeholder/300/300",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
-      },
-      {
-        name: "Chris Pine",
-        role: "Assistant Coordinator",
-        image: "/api/placeholder/300/300",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
-      },
-      {
-        name: "Eva Brown",
-        role: "Lead Coordinator",
-        image: "/api/placeholder/300/300",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
+        name: "Archisha Sharma",
+        role: "Coordinator",
+        image: "src/assets/team/archisha.jpg",
+        // linkedin: "https://linkedin.com",
+        // github: "https://github.com"
       },
     ]
   };
 
   return (
-    <section className="w-full min-h-screen bg-black py-20">
+    <section id='team' className="w-full min-h-screen bg-black py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-white/90 mb-16 text-center">
           Our Team

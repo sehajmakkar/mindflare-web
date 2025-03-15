@@ -14,6 +14,7 @@ const NavBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center w-full p-6 z-50">
       <nav className={`
@@ -31,7 +32,7 @@ const NavBar = () => {
       `}>
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="relative">
+          {/* <div className="relative">
             <BrainCircuit 
               size={28} 
               className="text-purple-500 transition-all duration-300 group-hover:scale-110 group-hover:text-purple-400"
@@ -45,16 +46,19 @@ const NavBar = () => {
             <span className="text-[0.6rem] md:text-xs text-white/50 font-medium -mt-1 tracking-wider">
               TECH SOCIETY
             </span>
-          </div>
+          < /div> */}
+        <div className='h-15 overflow-hidden rounded-lg flex items-center'> 
+          <img src="src/assets/logo.png" alt="MindFlare" className="h-20 " />
+        </div>
         </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           <NavLink href="#" text="Home" />
-          <NavLink href="#" text="About" />
-          <NavLink href="#" text="Projects" />
-          <NavLink href="#" text="Team" />
-          <NavLink href="#" text="Contact" />
+          {/* <NavLink href="#" text="About" /> */}
+          <NavLink  href="#projects" text="Projects" />
+          <NavLink href="#team" text="Team" />
+          <NavLink href="#contact" text="Contact" />
         </div>
 
         {/* Mobile Menu Button */}
@@ -89,10 +93,10 @@ const NavBar = () => {
             items-center
           ">
             <NavLink href="#" text="Home" mobile />
-            <NavLink href="#" text="About" mobile />
-            <NavLink href="#" text="Projects" mobile />
-            <NavLink href="#" text="Team" mobile />
-            <NavLink href="#" text="Contact" mobile />
+            {/* <NavLink href="#" text="About" mobile /> */}
+            <NavLink href="#projects" text="Projects" mobile />
+            <NavLink href="#team" text="Team" mobile />
+            <NavLink href="#contact" text="Contact" mobile />
           </div>
         </div>
       </nav>
