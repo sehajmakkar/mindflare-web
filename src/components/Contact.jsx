@@ -29,7 +29,7 @@ const SponsorContact = () => {
       setIsSubmitting(false);
       setSubmitStatus('success');
       setTimeout(() => setSubmitStatus(null), 2000);
-    }, 1000);
+    }, 1001);
   };
 
   const achievements = [
