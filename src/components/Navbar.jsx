@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, BrainCircuit } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Menu, X, BrainCircuit } from "lucide-react";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,26 +10,24 @@ const NavBar = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
 
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center w-full p-6 z-50">
-      <nav className={`
+      <nav
+        className={`
         flex items-center justify-between
         px-8 py-4
         rounded-full
         backdrop-blur-xl
         transition-all duration-300 ease-in-out
         border border-white/5
-        ${isScrolled 
-          ? 'bg-black/60 shadow-lg' 
-          : 'bg-black/30'
-        }
+        ${isScrolled ? "bg-black/60 shadow-lg" : "bg-black/30"}
         max-w-6xl w-full
-      `}>
+      `}
+      >
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
           {/* <div className="relative">
@@ -47,43 +45,48 @@ const NavBar = () => {
               TECH SOCIETY
             </span>
           < /div> */}
-        <div className='h-15 overflow-hidden rounded-lg flex items-center'> 
-          <img src="src/assets/logo.png" alt="MindFlare" className="h-20 " />
-        </div>
+          <div className="h-15 overflow-hidden rounded-lg flex items-center">
+            <img src=" logo.png" alt="MindFlare" className="h-20 " />
+          </div>
         </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           <NavLink href="#" text="Home" />
           {/* <NavLink href="#" text="About" /> */}
-          <NavLink  href="#projects" text="Projects" />
+          <NavLink href="#projects" text="Projects" />
           <NavLink href="#team" text="Team" />
           <NavLink href="#contact" text="Contact" />
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-white/90 hover:text-white transition-all"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen 
-            ? <X size={24} className="animate-in fade-in duration-200" /> 
-            : <Menu size={24} className="animate-in fade-in duration-200" />
-          }
+          {isMenuOpen ? (
+            <X size={24} className="animate-in fade-in duration-200" />
+          ) : (
+            <Menu size={24} className="animate-in fade-in duration-200" />
+          )}
         </button>
 
         {/* Mobile Menu */}
-        <div className={`
+        <div
+          className={`
           absolute top-full right-1/2 transform translate-x-1/2
           mt-4 md:hidden
           transition-all duration-300 ease-in-out
           w-[90%] max-w-md
-          ${isMenuOpen 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 -translate-y-4 pointer-events-none'
+          ${
+            isMenuOpen
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-4 pointer-events-none"
           }
-        `}>
-          <div className="
+        `}
+        >
+          <div
+            className="
             py-4 px-6
             bg-black/80 backdrop-blur-xl
             rounded-2xl
@@ -91,7 +94,8 @@ const NavBar = () => {
             shadow-lg
             flex flex-col gap-4
             items-center
-          ">
+          "
+          >
             <NavLink href="#" text="Home" mobile />
             {/* <NavLink href="#" text="About" mobile /> */}
             <NavLink href="#projects" text="Projects" mobile />
@@ -123,7 +127,7 @@ const NavLink = ({ href, text, mobile = false }) => (
       after:transition-all
       after:duration-300
       hover:after:w-full
-      ${mobile ? 'py-1 w-full text-center' : ''}
+      ${mobile ? "py-1 w-full text-center" : ""}
     `}
   >
     {text}

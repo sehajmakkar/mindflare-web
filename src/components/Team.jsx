@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Github, Linkedin } from 'lucide-react';
+import React, { useState } from "react";
+import { Github, Linkedin } from "lucide-react";
 
 const TeamSection = () => {
-  const [activeTab, setActiveTab] = useState('Executive');
+  const [activeTab, setActiveTab] = useState("Executive");
 
   const tabs = [
-    'Executive',
-    'Technical',
-    'PR',
-    'Event Management',
-    'Coordination'
+    "Executive",
+    "Technical",
+    "PR",
+    "Event Management",
+    "Coordination",
   ];
 
   // Complete team data with separate members for each category
@@ -18,70 +18,70 @@ const TeamSection = () => {
       {
         name: "Ankush",
         role: "President",
-        image: "src/assets/team/Ankush.jpg",
-        linkedin: "https://www.linkedin.com/in/ankush-prasad-990a86259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        image: " team/Ankush.jpg",
+        linkedin:
+          "https://www.linkedin.com/in/ankush-prasad-990a86259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         // github: "https://github.com"
       },
       {
         name: "Karan",
         role: "Vice President",
-        image: "src/assets/team/karan.jpg",
+        image: " team/karan.jpg",
         // linkedin: "https://linkedin.com",
         // github: "https://github.com"
       },
       {
         name: "Piyush",
         role: "Secretary",
-        image: "src/assets/team/piyush.jpg",
+        image: " team/piyush.jpg",
         linkedin: "https://www.linkedin.com/in/piyush-jha-93b94222b/",
         // github: "https://github.com"
-      }
+      },
     ],
     Technical: [
       {
         name: "Sehaj Preet",
         role: "Technical Head",
-        image: `src/assets/team/sehaj.png`,
+        image: ` team/sehaj.png`,
         linkedin: "https://www.linkedin.com/in/sehajmakkar/",
-        github: "https://github.com/sehajmakkar"
+        github: "https://github.com/sehajmakkar",
       },
       {
         name: "Dhruv",
         role: "Creative Head",
-        image: "src/assets/team/dhruv.jpg",
+        image: "team/dhruv.jpg",
         // linkedin: "https://linkedin.com",
         // github: "https://github.com"
-      }
+      },
     ],
     PR: [
       {
         name: "Udita",
         role: "PR Officer",
-        image: "src/assets/team/udita.jpg",
+        image: " team/udita.jpg",
         // linkedin: "https://linkedin.com",
         // github: "https://github.com"
       },
       {
         name: "Aditya",
         role: "Marketing Head",
-        image: "src/assets/team/aditya.jpg",
+        image: " team/aditya.jpg",
         // linkedin: "https://linkedin.com",
         // github: "https://github.com"
       },
-
     ],
     "Event Management": [
       {
         name: "Chirag",
         role: "Event Coordinator",
-        image: "src/assets/team/chirag.jpg",
+        image: "team/chirag.jpg",
         // linkedin: "https://linkedin.com",
         // github: "https://github.com"
       },
       {
         name: "Abhay",
         role: "Photography Head",
-        image: "src/assets/team/abhay.jpg",
+        image: " team/abhay.jpg",
         // linkedin: "https://linkedin.com",
         // github: "https://github.com"
       },
@@ -90,15 +90,15 @@ const TeamSection = () => {
       {
         name: "Archisha Sharma",
         role: "Coordinator",
-        image: "src/assets/team/archisha.jpg",
+        image: " team/archisha.jpg",
         // linkedin: "https://linkedin.com",
         // github: "https://github.com"
       },
-    ]
+    ],
   };
 
   return (
-    <section id='team' className="w-full min-h-screen bg-black py-20">
+    <section id="team" className="w-full min-h-screen bg-black py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-white/90 mb-16 text-center">
           Our Team
@@ -112,8 +112,8 @@ const TeamSection = () => {
               onClick={() => setActiveTab(tab)}
               className={`px-6 py-2 rounded-full transition-all duration-300 ${
                 activeTab === tab
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-zinc-900/50 text-white/70 hover:bg-zinc-800/50'
+                  ? "bg-purple-600 text-white"
+                  : "bg-zinc-900/50 text-white/70 hover:bg-zinc-800/50"
               }`}
             >
               {tab}
@@ -155,9 +155,7 @@ const MemberCard = ({ member }) => {
         <h3 className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
           {member.name}
         </h3>
-        <p className="text-white/70 text-sm mb-4">
-          {member.role}
-        </p>
+        <p className="text-white/70 text-sm mb-4">{member.role}</p>
 
         {/* Social Links */}
         <div className="flex gap-3">

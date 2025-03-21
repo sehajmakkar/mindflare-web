@@ -1,30 +1,32 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const EventsSection = () => {
   const events = [
     {
       id: 1,
       title: "DSAxTREME BATTLE 1.O",
-      description: "An intensive workshop on emerging technologies and their applications in modern software development.",
+      description:
+        "An intensive workshop on emerging technologies and their applications in modern software development.",
       images: [
-        "src/assets/events/dsa/03.jpg",
-        "src/assets/events/dsa/02.jpg",
-        "src/assets/events/dsa/01.jpg",
-        "src/assets/events/dsa/04.jpg"
-      ]
+        " events/dsa/03.jpg",
+        " events/dsa/02.jpg",
+        " events/dsa/01.jpg",
+        " events/dsa/04.jpg",
+      ],
     },
     {
       id: 2,
       title: "Orientation",
-      description: "From unveiling our vision of innovation to sharing exciting plans for hackathons, coding battles, workshops, and networking sessions — the enthusiasm was contagious!",
+      description:
+        "From unveiling our vision of innovation to sharing exciting plans for hackathons, coding battles, workshops, and networking sessions — the enthusiasm was contagious!",
       images: [
-        "src/assets/events/orientation/04.png",
-        "src/assets/events/orientation/02.png",
-        "src/assets/events/orientation/01.png",
-        "src/assets/events/orientation/03.png"
-      ]
-    }
+        " events/orientation/04.png",
+        " events/orientation/02.png",
+        " events/orientation/01.png",
+        " events/orientation/03.png",
+      ],
+    },
   ];
 
   return (
@@ -33,14 +35,16 @@ const EventsSection = () => {
         <h2 className="text-4xl font-bold text-white/90 mb-16 text-center animate-fade-in">
           MindFlare is always upto something!
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8">
           {events.map((event, index) => (
-            <div key={event.id} 
-                 className="animate-slide-up"
-                 style={{
-                   animationDelay: `${index * 200}ms`
-                 }}>
+            <div
+              key={event.id}
+              className="animate-slide-up"
+              style={{
+                animationDelay: `${index * 200}ms`,
+              }}
+            >
               <EventCard event={event} />
             </div>
           ))}
@@ -60,11 +64,14 @@ const EventCard = ({ event }) => {
 
   const prevImage = (e) => {
     e.stopPropagation();
-    setCurrentImage((prev) => (prev - 1 + event.images.length) % event.images.length);
+    setCurrentImage(
+      (prev) => (prev - 1 + event.images.length) % event.images.length
+    );
   };
 
   return (
-    <div id='projects'
+    <div
+      id="projects"
       className="bg-zinc-900/50 rounded-xl overflow-hidden border border-white/5 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg hover:shadow-purple-500/10 group"
     >
       <div className="relative aspect-[3/2]">
@@ -74,7 +81,7 @@ const EventCard = ({ event }) => {
             alt={`${event.title}`}
             className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           />
-          
+
           <div className="absolute inset-0 flex items-center justify-between p-2">
             <button
               onClick={prevImage}
@@ -100,8 +107,8 @@ const EventCard = ({ event }) => {
                 }}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
                   currentImage === index
-                    ? 'bg-white w-6'
-                    : 'bg-white/50 w-1.5 hover:bg-white/70'
+                    ? "bg-white w-6"
+                    : "bg-white/50 w-1.5 hover:bg-white/70"
                 }`}
               />
             ))}
