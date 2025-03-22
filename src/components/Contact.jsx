@@ -102,7 +102,7 @@ const SponsorContact = () => {
           </div>
 
           {/* Achievement Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {achievements.map((achievement, index) => (
               <div 
                 key={index}
@@ -116,7 +116,7 @@ const SponsorContact = () => {
                 <p className="text-white/60 text-sm">{achievement.description}</p>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Previous Events Showcase */}
           {/* <div className="mb-16">
@@ -146,7 +146,7 @@ const SponsorContact = () => {
             onSubmit={handleSubmit}
             className="bg-zinc-900/50 border border-white/5 rounded-xl p-8 space-y-6 max-w-2xl mx-auto"
           >
-            <h3 className="text-2xl font-bold text-white/90 mb-6 text-center">Get In Touch</h3>
+            {/* <h3 className="text-2xl font-bold text-white/90 mb-6 text-center">Get In Touch</h3> */}
             
             {/* Company Name */}
             <div>

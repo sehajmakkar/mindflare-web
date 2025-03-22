@@ -27,8 +27,8 @@ const TeamSection = () => {
         name: "Karan",
         role: "Vice President",
         image: " team/karan.jpg",
-        // linkedin: "https://linkedin.com",
-        // github: "https://github.com"
+        linkedin: "https://www.linkedin.com/in/karankumar7107/",
+        github: "https://github.com/KaranKumar2326"
       },
       {
         name: "Piyush",
@@ -42,7 +42,7 @@ const TeamSection = () => {
       {
         name: "Sehaj Preet",
         role: "Technical Head",
-        image: ` team/sehaj.png`,
+        image: `team/sehaj.png`,
         linkedin: "https://www.linkedin.com/in/sehajmakkar/",
         github: "https://github.com/sehajmakkar",
       },
@@ -59,14 +59,14 @@ const TeamSection = () => {
         name: "Udita",
         role: "PR Officer",
         image: " team/udita.jpg",
-        // linkedin: "https://linkedin.com",
-        // github: "https://github.com"
+        linkedin: "https://www.linkedin.com/in/udita-mittal-1756342a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        github: "https://github.com/udi2005"
       },
       {
         name: "Aditya",
         role: "Marketing Head",
         image: " team/aditya.jpg",
-        // linkedin: "https://linkedin.com",
+        linkedin: "https://www.linkedin.com/in/aditya-kumar-b921a62a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         // github: "https://github.com"
       },
     ],
