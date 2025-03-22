@@ -41,12 +41,11 @@ export default function UpcomingEventComponent() {
   
   // Sample sponsor data - replace with your actual sponsors
   const sponsors = [
-    { id: 1, name: 'CodeCrafter', logo: '/sponsors/codecrafter.png' },
-    { id: 2, name: 'ByteWave', logo: '/api/placeholder/150/80' },
-    { id: 3, name: 'NexGen', logo: '/api/placeholder/150/80' },
-    { id: 4, name: 'Mindflare', logo: '/logo.png' },
-    { id: 5, name: 'QuantumTech', logo: '/api/placeholder/150/80' },
-    { id: 6, name: 'InfinityCode', logo: '/api/placeholder/150/80' },
+    { id: 1, name: 'CodeCrafter', logo: '/sponsors/codecrafter.png', url: 'https://codecrafters.io/' },
+    { id: 2, name: 'EDC', logo: '/sponsors/edc.jpg', url: 'https://www.instagram.com/edcell.mait/?hl=en' },
+    { id: 3, name: 'Under25', logo: '/sponsors/under25.png', url: 'https://www.instagram.com/under25mait/' },
+    { id: 4, name: 'Zenith', logo: '/sponsors/zenithh.jpg', url: 'https://unstop.com/college-fests/zenith-the-official-e-summit-of-mait-edc-mait-351072' },
+    { id: 5, name: 'Coding Blocks', logo: '/sponsors/codingblocks.png', url: 'https://www.codingblocks.com/' }
   ];
 
   // Sample event data
@@ -59,7 +58,7 @@ export default function UpcomingEventComponent() {
     location: 'Maharaja Agrasen Institute of Technology, Delhi',
     registerUrl: 'https://unstop.com/o/WxMgATw?lb=WLd4hthq&utm_medium=Share&utm_source=shortUrl'
   };
-
+  
   // Vertical scroll animation for desktop sponsors
   useEffect(() => {
     const sponsorContainer = verticalSponsorRef.current;
@@ -117,6 +116,9 @@ export default function UpcomingEventComponent() {
       <div className="hidden md:block w-48 h-full bg-gradient-to-b from-black to-purple-950/20 overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-900/5 to-black/20 z-10 pointer-events-none" />
         
+        {/* "Our Sponsors" title for desktop */}
+        <p className="text-center font-medium text-purple-300 py-3 px-2 bg-black/40 backdrop-blur-sm">Our Sponsors</p>
+        
         <div 
           ref={verticalSponsorRef}
           className="h-full overflow-hidden"
@@ -124,16 +126,20 @@ export default function UpcomingEventComponent() {
         >
           <div className="flex flex-col items-center py-4 gap-16">
             {duplicatedSponsors.map((sponsor, index) => (
-              <div 
-                key={`${sponsor.id}-${index}`} 
-                className="w-32 h-32 flex items-center justify-center p-2 transition-all duration-300 hover:opacity-100 opacity-80"
+              <a 
+                key={`${sponsor.id}-${index}`}
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer" 
+                className="w-32 h-32 flex items-center justify-center p-2 transition-all duration-300 hover:opacity-100 opacity-80 hover:scale-110 cursor-pointer"
               >
                 <img 
                   src={sponsor.logo} 
                   alt={sponsor.name} 
                   className="max-w-full max-h-full filter drop-shadow-lg"
+                  title={sponsor.name}
                 />
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -141,8 +147,16 @@ export default function UpcomingEventComponent() {
       
       {/* Main content area */}
       <div className="flex-1 h-full overflow-hidden flex flex-col">
+        {/* "Live Event" title banner */}
+        <div className="bg-gradient-to-r from-purple-900 to-purple-700 py-2 px-4 text-center">
+          <h1 className="text-lg md:text-xl font-bold text-white flex items-center justify-center">
+            <span className="inline-block w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse"></span>
+            LIVE EVENT
+          </h1>
+        </div>
+        
         {/* Event image */}
-        <div className="w-full md:h-3/5 h-2/5 relative overflow-hidden">
+        <div className="w-full md:h-[55%] h-2/5 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 z-10" />
           <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-0">
             <img 
@@ -184,6 +198,8 @@ export default function UpcomingEventComponent() {
               <StarBorder 
                 as="a" 
                 href={event.registerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 color="rgb(139, 92, 246)" /* Purple-500 */
                 speed="5s"
                 className="transform hover:scale-105 transition-transform duration-300"
@@ -209,6 +225,8 @@ export default function UpcomingEventComponent() {
               <StarBorder 
                 as="a" 
                 href={event.registerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 color="#9d4edd"
                 speed="7s"
                 className="transform scale-105 hover:scale-110 transition-all duration-300"
@@ -226,6 +244,9 @@ export default function UpcomingEventComponent() {
         <div className="md:hidden h-1/5 bg-gradient-to-r from-black to-purple-950/20 overflow-hidden relative">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/5 to-black/20 z-10 pointer-events-none" />
           
+          {/* "Our Sponsors" title for mobile */}
+          <p className="text-center font-medium text-purple-300 py-1 bg-black/40 backdrop-blur-sm">Our Sponsors</p>
+          
           <div 
             ref={horizontalSponsorRef}
             className="w-full h-full overflow-hidden"
@@ -233,16 +254,20 @@ export default function UpcomingEventComponent() {
           >
             <div className="flex flex-row items-center h-full py-2 px-4 gap-8">
               {duplicatedSponsors.map((sponsor, index) => (
-                <div 
-                  key={`${sponsor.id}-mobile-${index}`} 
-                  className="flex-shrink-0 w-20 h-20 flex items-center justify-center p-2 transition-all duration-300 hover:opacity-100 opacity-80"
+                <a 
+                  key={`${sponsor.id}-mobile-${index}`}
+                  href={sponsor.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 w-20 h-20 flex items-center justify-center p-2 transition-all duration-300 hover:opacity-100 opacity-80 hover:scale-110 cursor-pointer"
                 >
                   <img 
                     src={sponsor.logo} 
                     alt={sponsor.name} 
+                    title={sponsor.name}
                     className="max-w-full max-h-full filter drop-shadow-lg"
                   />
-                </div>
+                </a>
               ))}
             </div>
           </div>
