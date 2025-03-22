@@ -6,6 +6,7 @@ import Events from "./Events";
 import Team from "./Team";
 import Contact from "./Contact";
 import Upcoming from "./Upcoming";
+import Footer from "./Footer";
 import { useRef } from "react";
 
 const Landing = () => {
@@ -26,6 +27,9 @@ const Landing = () => {
       </div>
       <div>
         <Contact />
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   );
