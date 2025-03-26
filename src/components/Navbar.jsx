@@ -46,7 +46,7 @@ const NavBar = () => {
             </span>
           < /div> */}
           <div className="h-15 overflow-hidden rounded-lg flex items-center">
-            <img src=" logo.png" alt="MindFlare" className="h-20 " />
+            <img src="logo-no-bg.png" alt="MindFlare" className="h-30 w-30 mt-7 " />
           </div>
         </a>
 
