@@ -42,7 +42,7 @@ export default function UpcomingEventComponent() {
   // Sample sponsor data - replace with your actual sponsors
   const sponsors = [
     { id: 1, name: 'CodeCrafter', logo: '/sponsors/codecrafter.png', url: 'https://codecrafters.io/' },
-    { id: 2, name: 'EDC', logo: '/sponsors/edc.jpg', url: 'https://www.instagram.com/edcell.mait/?hl=en' },
+    { id: 2, name: 'SwapSo', logo: '/sponsors/swapso.png', url: 'https://www.swapso.io' },
     { id: 3, name: 'Under25', logo: '/sponsors/under25.png', url: 'https://www.instagram.com/under25mait/' },
     { id: 4, name: 'Zenith', logo: '/sponsors/zenithh.jpg', url: 'https://unstop.com/college-fests/zenith-the-official-e-summit-of-mait-edc-mait-351072' },
     { id: 5, name: 'Coding Blocks', logo: '/sponsors/codingblocks.png', url: 'https://www.codingblocks.com/' }
